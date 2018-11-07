@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      POSTGRES_DB: stoqviva
+      POSTGRES_PASSWORD: stoqviva
+      POSTGRES_USER: stoqviva
+    volumes:
+      - './postgresql/data:/var/lib/postgresql/data'
+    ports:
+      - '5434:5432'
